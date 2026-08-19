@@ -1,0 +1,39 @@
+# Force LF line endings for all text files across all OS platforms
+* text=auto eol=lf
+
+# ------------------------------------------------------------------------------
+# Explicit Document & Markup Handling (LF)
+# ------------------------------------------------------------------------------
+*.md        text eol=lf
+*.json      text eol=lf
+*.yaml      text eol=lf
+*.yml       text eol=lf
+*.toml      text eol=lf
+*.txt       text eol=lf
+*.xml       text eol=lf
+
+# ------------------------------------------------------------------------------
+# Shell & Automation Scripts (Must be LF to avoid syntax errors on Unix)
+# ------------------------------------------------------------------------------
+*.sh        text eol=lf
+Brewfile    text eol=lf
+.gitconfig  text eol=lf
+
+# ------------------------------------------------------------------------------
+# Windows Specific Scripts (PowerShell & Batch)
+# ------------------------------------------------------------------------------
+*.ps1       text eol=crlf
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+
+# ------------------------------------------------------------------------------
+# Binary Files (Treat as raw binary, do not touch line endings)
+# ------------------------------------------------------------------------------
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.pdf       binary
+*.zip       binary
+*.exe       binary
