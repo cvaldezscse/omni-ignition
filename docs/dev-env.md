@@ -1,4 +1,4 @@
-# Development Config
+# Development Setup
 
 ### Themes
 
@@ -14,6 +14,7 @@
 - Prettier
 - Auto Rename Tag
 - subtle match (Rafa Mel)
+- RainbowCSV
 
 ### Configs
 
@@ -26,7 +27,7 @@ We need to go with Ctrl/Cmd + ,
 | `"workbench.editor.showTabs": false`                       | Hide all the tabs in Vscode                                           |
 | `"editor.minimap.enabled": false`                          | Hide mini code map                                                    |
 | `"editor.scrollbar.vertical": auto`                        | Hide scroll bar and only show when scrolling                          |
-| `"editor.overviewRulerBorder": false`                      | Hides the ruler marks in the left scrollin bar                        |
+| `"editor.overviewRulerBorder": false`                      | Hides the ruler marks in the left scrollingbar                        |
 | `"editor.hideCursorInOverviewRuler": true`                 | Hides the cursor position check                                       |
 | `"editor.formatOnSave": true`                              | auto formats any file when save                                       |
 | `"editor.guides.indentation": false`                       | Disables VSCode Indentation (since we have already Indentator plugin) |
