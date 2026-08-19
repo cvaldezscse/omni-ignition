@@ -1,7 +1,6 @@
 # omni-ignition 🚀
 
-> **Universal Workstation Provisioning Repository**  
-> Cross-platform bootstrapping, package manifests, dotfiles, and setup guides for **macOS** and **Windows**. Designed for multi-disciplinary workflows covering **Software Development**, **Full-Spectrum Test Automation (SDET)**, and **DevOps / Infrastructure**.
+Cross-platform bootstrapping, package manifests, dotfiles, and setup guides for **macOS** and **Windows**. Designed for multi-disciplinary workflows covering **Software Development**, **Full-Spectrum Test Automation (SDET)**, and **DevOps / Infrastructure**.
 
 ---
 
@@ -11,17 +10,23 @@ When setting up a brand-new or freshly formatted machine, open a clean terminal 
 
 ### 1. Clone the Repository
 
+```
 git clone https://github.com/your-username/omni-ignition.git ~/.omni-ignition
 cd ~/.omni-ignition
+```
 
 ---
 
 ## 🍏 macOS Bootstrapping
 
 1. **Run the Automated Setup Script:**
+
+```
    chmod +x scripts/setup-mac.sh
    ./scripts/setup-mac.sh
-   _This script installs Homebrew, applies os/macos/Brewfile, links dotfiles, and configures macOS defaults._
+```
+
+_This script installs Homebrew, applies os/macos/Brewfile, links dotfiles, and configures macOS defaults._
 
 2. **Manual & Domain-Specific Setup:**
    - Refer to docs/macos-setup.md for system settings and Xcode Command Line Tools.
@@ -46,39 +51,46 @@ cd ~/.omni-ignition
 
 Below is the complete blueprint of omni-ignition:
 
+<details open>
+<summary><b>🔍 Click to view full directory tree</b></summary>
+
+```text
 omni-ignition/
-├── README.md <-- Main orchestration & quick-start guide
-├── docs/ <-- Deep-dive setup guides per domain
-│ ├── dev-env.md <-- Multi-stack runtimes (Node, Python, Java, Go, .NET, PHP)
-│ ├── test-automation.md <-- Multi-platform QA stack (Web, Mobile, API, Desktop, Performance)
-│ ├── devops-cloud.md <-- Cloud & Infra (AWS CLI, Docker/Podman, Terraform, K8s, CI/CD)
-│ ├── macos-setup.md <-- OS-specific tweaks & manual steps for macOS
-│ └── windows-setup.md <-- OS-specific tweaks, WSL & PowerShell setup for Windows
+├── README.md                    <-- Main orchestration & quick-start guide
+├── docs/                        <-- Deep-dive setup guides per domain
+│   ├── dev-env.md               <-- Multi-stack runtimes (Node, Python, Java, Go, .NET, PHP)
+│   ├── test-automation.md       <-- Multi-platform QA stack (Web, Mobile, API, Desktop, Performance)
+│   ├── devops-cloud.md          <-- Cloud & Infra (AWS CLI, Docker/Podman, Terraform, K8s, CI/CD)
+│   ├── macos-setup.md           <-- OS-specific tweaks & manual steps for macOS
+│   └── windows-setup.md         <-- OS-specific tweaks, WSL & PowerShell setup for Windows
 │
-├── os/ <-- OS Package Manifests & System Defaults
-│ ├── macos/
-│ │ ├── Brewfile <-- Homebrew formulae, casks, & Mac App Store apps
-│ │ └── macos-defaults.sh <-- Terminal script for macOS system preferences
-│ └── windows/
-│ ├── packages.json <-- Winget bundle for bulk app installation
-│ └── profile.ps1 <-- Custom PowerShell profile with dev, QA & DevOps aliases
+├── os/                          <-- OS Package Manifests & System Defaults
+│   ├── macos/
+│   │   ├── Brewfile             <-- Homebrew formulae, casks, & Mac App Store apps
+│   │   └── macos-defaults.sh    <-- Terminal script for macOS system preferences
+│   └── windows/
+│       ├── packages.json        <-- Winget bundle for bulk app installation
+│       └── profile.ps1          <-- Custom PowerShell profile with dev, QA & DevOps aliases
 │
-├── apps/ <-- Cross-platform application configs & dotfiles
-│ ├── vscode/ <-- VS Code / VSCodium preferences
-│ │ ├── settings.json <-- Editor UI, formatting, and linter settings
-│ │ ├── keybindings.json <-- Custom keyboard shortcuts
-│ │ └── extensions.txt <-- Essential extensions for Dev, Test Automation & DevOps
-│ ├── git/
-│ │ ├── .gitconfig <-- Global Git settings, aliases, and diff tools
-│ │ └── .gitignore_global <-- System-wide ignored files (.DS_Store, Thumbs.db, etc.)
-│ ├── terminal/
-│ │ └── starship.toml <-- Cross-shell prompt theme & status indicators
-│ └── containers/
-│ └── daemon.json <-- Shared Docker Engine / Podman configurations
+├── apps/                        <-- Cross-platform application configs & dotfiles
+│   ├── vscode/                  <-- VS Code / VSCodium preferences
+│   │   ├── settings.json        <-- Editor UI, formatting, and linter settings
+│   │   ├── keybindings.json     <-- Custom keyboard shortcuts
+│   │   └── extensions.txt       <-- Essential extensions for Dev, Test Automation & DevOps
+│   ├── git/
+│   │   ├── .gitconfig           <-- Global Git settings, aliases, and diff tools
+│   │   └── .gitignore_global    <-- System-wide ignored files (.DS_Store, Thumbs.db, etc.)
+│   ├── terminal/
+│   │   └── starship.toml        <-- Cross-shell prompt theme & status indicators
+│   └── containers/
+│       └── daemon.json          <-- Shared Docker Engine / Podman configurations
 │
-└── scripts/ <-- One-click automated provisioning scripts
-├── setup-mac.sh <-- Installs Homebrew, applies Brewfile & links dotfiles
-└── setup-win.ps1 <-- Runs Winget import, links configs & sets PowerShell env
+└── scripts/                     <-- One-click automated provisioning scripts
+    ├── setup-mac.sh             <-- Installs Homebrew, applies Brewfile & links dotfiles
+    └── setup-win.ps1            <-- Runs Winget import, links configs & sets PowerShell env
+```
+
+</details>
 
 ---
 
