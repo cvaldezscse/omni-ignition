@@ -1,14 +1,10 @@
-# Initial Programming setup
-This project includes the bootstrap scripts in order to be installed the very first time in a brand new computer avoiding time wasting while installing the main setup
+# omni-ignition 🚀
 
+> Universal workstation provisioning repository for multi-discipline workflows (Software Engineering, Test Automation / SDET, DevOps & System Admin).
 
-## ToDos
-- [ ] Test out the sctipts (in order to verify the feasibility) and rollback in order to continue testing
-- [ ] Create the zshrc scripts
-- [ ] Create the proper bash profile sctipts
-- [ ] Add the installation for the main dev tools
-- [ ] Use CLI arguments for defining the scripts that were going to be installed
-- [ ] Include Windows scripts
-- [ ] Include Linux Scripts (for Main Linux distros )
-- [x] Include MacOS scripts
-- [ ] Implement conditionals for certain scenarios
+### 🛠️ Capabilities Included
+
+- **Dev Runtimes:** Node.js, Python, Java, Go, PHP/Laravel, .NET
+- **SDET & Mobile Testing:** Android SDK, ADB, Appium, Playwright/Selenium tooling
+- **DevOps & Cloud Tools:** Docker, AWS CLI, Terraform, Kubernetes CLI, Shell Profiles
+- **Dotfiles & GUI Apps:** VS Code/VSCodium configs, Terminal prompts, Git globals
