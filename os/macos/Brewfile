@@ -1,0 +1,26 @@
+# Brewfile - Homebrew package manifest for mobile automation on macOS.
+# Applied by scripts/setup-mac.sh via: brew bundle --file=os/macos/Brewfile
+#
+# Java is intentionally NOT listed here: Oracle JDK isn't redistributable
+# through Homebrew, so it's resolved separately by the Java version
+# resolver module (scripts/modules/macos/java.sh), which prefers Oracle
+# JDK builds over OpenJDK.
+
+# --- Core toolchain ---------------------------------------------------------
+brew "git"                     # version control (Xcode CLT usually provides this too)
+brew "maven"                   # builds the Java automation framework (see pom.xml)
+brew "nvm"                     # Node version manager, used to pin Appium's Node version
+
+# --- Mobile automation -------------------------------------------------------
+brew "cocoapods"                # builds WebDriverAgent (Appium's XCUITest driver)
+brew "ios-deploy"                # install/launch apps on physical iOS devices
+brew "libimobiledevice"          # low-level iOS device communication (used by Appium/ios-deploy)
+cask "android-platform-tools"    # adb, fastboot
+
+# --- Cloud / CI ---------------------------------------------------------------
+brew "awscli"                    # AWS Device Farm uploads and job orchestration
+
+# --- Optional (uncomment if your workflow needs them) -------------------------
+# cask "android-studio"           # full IDE + SDK manager GUI; skip if you manage the SDK via CLI
+# cask "intellij-idea-ce"         # IDE for the Java automation framework
+# brew "mas"                       # Mac App Store CLI; lets full Xcode be scripted via `mas install`
